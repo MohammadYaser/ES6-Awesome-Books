@@ -1,5 +1,6 @@
 import { DateTime } from './modules/luxon.js';
 import { addNewFun, listFun, contactFun } from './modules/display.js';
+
 const container = document.querySelector('#bookList');
 const addBtn = document.querySelector('#addButton');
 
@@ -71,7 +72,7 @@ add.addEventListener('click', () => {
 
 const list = document.getElementById('list');
 list.addEventListener('click', () => {
- listFun(addSection, listSection, contactSection);
+  listFun(addSection, listSection, contactSection);
 });
 
 const contact = document.getElementById('contactBtn');
@@ -81,5 +82,4 @@ contact.addEventListener('click', () => {
 
 const dTime = document.getElementById('dynamicParagraph');
 const now = DateTime.now();
-console.log(now);
 dTime.textContent = now.toLocaleString(DateTime.DATETIME_MED);
